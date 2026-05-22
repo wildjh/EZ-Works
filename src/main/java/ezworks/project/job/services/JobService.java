@@ -1,8 +1,9 @@
-package ezworks.project.jobmodule.services;
+package ezworks.project.job.services;
 
-import ezworks.project.jobmodule.entities.Job;
-import ezworks.project.jobmodule.repositories.JobRepository;
 import org.springframework.stereotype.Service;
+
+import ezworks.project.job.entities.Job;
+import ezworks.project.job.repositories.JobRepository;
 
 import java.util.List;
 import java.util.Optional;

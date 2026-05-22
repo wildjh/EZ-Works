@@ -1,14 +1,15 @@
-package ezworks.project.jobmodule.controllers;
+package ezworks.project.job.controllers;
 
-import ezworks.project.jobmodule.entities.Job;
-import ezworks.project.jobmodule.entities.JobStatus;
-import ezworks.project.jobmodule.services.CategoryService;
-import ezworks.project.jobmodule.services.JobService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import ezworks.project.job.entities.Job;
+import ezworks.project.job.entities.JobStatus;
+import ezworks.project.job.services.CategoryService;
+import ezworks.project.job.services.JobService;
 
 import java.util.List;
 

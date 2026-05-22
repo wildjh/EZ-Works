@@ -1,8 +1,9 @@
-package ezworks.project.jobmodule.repositories;
+package ezworks.project.job.repositories;
 
-import ezworks.project.jobmodule.entities.Matching;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import ezworks.project.job.entities.Matching;
 
 import java.util.List;
 

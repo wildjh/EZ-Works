@@ -1,4 +1,4 @@
-package ezworks.project.jobmodule.entities;
+package ezworks.project.job.entities;
 
 import lombok.Getter;
 

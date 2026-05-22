@@ -1,8 +1,9 @@
-package ezworks.project.jobmodule.services;
+package ezworks.project.job.services;
 
-import ezworks.project.jobmodule.entities.Matching;
-import ezworks.project.jobmodule.repositories.MatchingRepository;
 import org.springframework.stereotype.Service;
+
+import ezworks.project.job.entities.Matching;
+import ezworks.project.job.repositories.MatchingRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
