@@ -1,0 +1,45 @@
+package ezworks.project.jobmodule.services;
+
+import ezworks.project.jobmodule.entities.Job;
+import ezworks.project.jobmodule.repositories.JobRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class JobService {
+
+    private final JobRepository jobRepository;
+
+    // Inyección de dependencias
+    public JobService(JobRepository jobRepository) {
+        this.jobRepository = jobRepository;
+    }
+
+    // Listar todos los empleos
+    public List<Job> buscarTodos() {
+        return jobRepository.findAll();
+    }
+
+    // Guardar un empleo (Sirve tanto para crear como para actualizar)
+    public void guardar(Job job) {
+        jobRepository.save(job);
+    }
+
+    // Buscar un empleo por su ID (Para ver los detalles)
+    public Job buscarPorId(Integer id) {
+        Optional<Job> opcional = jobRepository.findById(id);
+        return opcional.orElse(null);
+    }
+
+    // Buscar empleos por una categoría específica (Usando el método personalizado que creamos)
+    public List<Job> buscarPorCategoria(Integer idCategoria) {
+        return jobRepository.findByCategoryId(idCategoria);
+    }
+
+    // Eliminar un empleo
+    public void eliminar(Integer id) {
+        jobRepository.deleteById(id);
+    }
+}
