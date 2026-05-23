@@ -24,8 +24,9 @@ public class JobService {
     }
 
     // Guardar un empleo (Sirve tanto para crear como para actualizar)
-    public void guardar(Job job) {
-        jobRepository.save(job);
+    public Job guardar(Job job) {
+        // devolver la entidad resultante del save (contiene id generado y cambios del proveedor JPA)
+        return jobRepository.save(job);
     }
 
     // Buscar un empleo por su ID (Para ver los detalles)
